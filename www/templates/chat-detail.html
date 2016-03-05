@@ -1,0 +1,40 @@
+<ion-view view-title="CHATS" hide-back-button="true" has-footer="true">
+  <ion-nav-buttons side="right">  
+    <button class="button button-icon ion-more" ng-click="popover.show($event)"></button> 
+  </ion-nav-buttons>
+  <ion-nav-buttons side="left">  
+    <button class="button button-icon ion-ios-arrow-back" ui-sref="tab.chats"></button> 
+  </ion-nav-buttons>
+  <ion-content delegate-handle="mainScroll" has-footer="true">
+    <ion-list class="list">
+      <li ng-repeat="x in roomMsg" ng-class="{'item item-avatar-left item-text-wrap':(x.email != currentUser.email), 'item item-avatar-right item-text-wrap':(x.email == currentUser.email)}">
+        <img ng-src="{{x.picture}}">
+        <div ng-class="{'bubbleRight':(x.email == currentUser.email), 'bubbleLeft':(x.email != currentUser.email)}">
+          <h2><b>{{x.sender}}</b></h2>
+          <p>{{x.message}}</p>
+        </div>
+      </li>
+    </ion-list>
+
+    <script id="templates/popover.html" type="text/ng-template">
+      <ion-popover-view style="height:70px;">
+        <ion-content>
+          <ion-list>
+            <ion-item class="item item-light" type="item-text-wrap" ng-click="openAddFriendModal()">
+              Group Members
+            </ion-item>
+          </ion-list>
+        </ion-content>
+      </ion-popover-view>
+    </script>
+  </ion-content>
+
+  <ion-footer-bar class="item-input-inset footer-item-input-inset">
+    <label class="item item-input-wrapper">
+      <i class="icon ion-android-chat placeholder-icon"></i>
+      <input type="text" placeholder="Enter Your Message" ng-model="message"/ ng-enter="sendMessage()">
+    </label>
+    <button class="button button-balanced button-clear ion-ios-checkmark icon" ng-click="sendMessage()"></button>
+  </ion-footer-bar>
+
+</ion-view>

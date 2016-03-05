@@ -1,0 +1,40 @@
+<ion-view view-title="ACCOUNT">
+  <ion-content>
+  	<ion-item class="item-remove-animate item-avatar" type="item-text-wrap">
+	    <img ng-src="{{currentUser.picture}}">
+	    <h2>{{currentUser.display_name}}</h2>
+		<p>{{currentUser.status}}</p>
+    </ion-item>
+
+	  <ion-item class="item item-divider item-calm" type="item-text-wrap" style="background:#515d6d">
+    	<i class="icon ion-checkmark-round"></i> Profile
+    </ion-item>
+
+    <ion-item class="item item-light" type="item-text-wrap"> 
+   		Email : {{currentUser.email}}
+    </ion-item>
+     
+    <ion-item class="item item-light" type="item-text-wrap" ng-click="editDisplay()">
+      <i class="ion-ios-arrow-right right"></i>
+     	Display Name : {{currentUser.display_name}}
+    </ion-item>
+    
+    <ion-item class="item item-light" type="item-text-wrap" ng-click="editStatus()">
+      <i class="ion-ios-arrow-right right"></i>
+    	Status : {{currentUser.status}}
+    </ion-item>
+
+    <ion-item class="item-avatar" type="item-text-wrap" ng-click="editPicture()">
+		<img ng-src="{{currentUser.picture}}">
+		<h2 style="line-height:40px">Profile Picture</h2>
+    </ion-item>
+
+	<ion-item class="item item-divider item-assertive" type="item-text-wrap">
+    	<i class="icon ion-checkmark-round"></i> Setting
+    </ion-item>
+
+   	<ion-item class="item item-light" type="item-text-wrap" ng-click="logout()">
+    	Logout
+    </ion-item>
+  </ion-content>
+</ion-view>

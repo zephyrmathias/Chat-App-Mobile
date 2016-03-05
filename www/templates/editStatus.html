@@ -1,0 +1,24 @@
+<div class="modal">
+    <ion-header-bar class="bar-dark">
+        <h1 class="title">Change Status</h1>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list">
+            <label class="item item-input">
+                <i class="icon ion-help-circled placeholder-icon"></i>
+                <span class="input-label">Status</span>
+                <input type="text" ng-model="status" placeholder="Enter Status">
+            </label>
+        </div>
+ 
+            <div class="row">
+                <div class="col">
+                    <button class="button button-block button-dark button-theme" ng-click="cancelModalStatus()">Cancel</button>
+                </div>
+                <div class="col col-70">
+                    <button class="button button-block button-positive button-theme" ng-click="saveStatus(status)">Save</button>
+                </div>
+            </div>
+  
+    </ion-content>
+</div>

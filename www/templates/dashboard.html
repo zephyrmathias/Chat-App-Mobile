@@ -1,0 +1,27 @@
+<ion-view title="CONTACTS">
+  <ion-content>
+    <ion-refresher
+      pulling-text="Pull to refresh..."
+      on-refresh="doRefresh()">
+    </ion-refresher>
+
+    <div class="item item-divider" style="background:#920539;color:#fff">ME</div>
+      <ion-list>
+        <ion-item class="item-remove-animate item-avatar" type="item-text-wrap" href="#">
+          <img ng-src="{{currentUser.picture}}">
+          <h2>{{currentUser.display_name}}</h2>
+          <p>{{currentUser.status}}</p>
+      </ion-list>
+
+    <div class="item item-divider" style="background:#cc3970;color:#FFF">FRIENDS</div>
+      <ion-list>
+        <ion-item class="item-remove-animate item-avatar" ng-repeat="user in roster" ng-hide="user.email == currentUser.email" ng-click="randomRoom(20,user)" type="item-text-wrap" href="#/tab/chats/{{roomId}}">
+          <img ng-src="{{user.picture}}">
+          <h2>{{user.display_name}}</h2>
+          <p>{{user.status}}</p>
+          <ion-option-button class="button button-assertive button-outline ion-android-checkbox icon" ng-click="remove(chat)">
+          </ion-option-button>
+        </ion-item>
+      </ion-list>
+  </ion-content>
+</ion-view>

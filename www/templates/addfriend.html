@@ -1,0 +1,31 @@
+<div class="modal">
+    <ion-header-bar class="bar-dark">
+        <h1 class="title">GROUP</h1>
+    </ion-header-bar>
+    <ion-content>
+      <div class="item item-divider" style="background:#cc3970;color:#FFF">GROUP MEMBERS</div>
+      <ion-list>
+        <ion-item class="item-remove-animate item-avatar" ng-repeat="x in usersInRoom[roomId]" type="item-text-wrap">
+          <img ng-src="{{x.picture}}">
+          <h2>{{x.display_name}}</h2>
+          <p>{{x.status}}</p>
+          <ion-option-button class="button button-assertive button-outline ion-ios-close icon" ng-click="kick(x, '{{roomId}}')">
+          </ion-option-button>
+        </ion-item>
+      </ion-list>
+        <div class="item item-divider" style="background:#cc3970;color:#FFF">WHO CAN I INVITE?</div>
+      <ion-list>
+        <ion-item class="item-remove-animate item-avatar" ng-repeat="user in roster" ng-hide="(whoOnline[roomId].indexOf(user.email) > -1)" ng-click="addFriend(user, '{{roomId}}')" type="item-text-wrap">
+          <img ng-src="{{user.picture}}">
+          <h2>{{user.display_name}}</h2>
+          <p>{{user.status}}</p>
+        </ion-item>
+        <div class="row">
+            <div class="col">
+                <button class="button button-block button-dark button-theme" ng-click="hideAddFriendModal()">Cancel</button>
+            </div>
+        </div>
+      </ion-list>
+  
+    </ion-content>
+</div>

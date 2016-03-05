@@ -1,0 +1,38 @@
+<ion-view view-title="SIGN IN" hide-nav-bar="true">
+  <ion-content class="padding bgSign">
+
+    <div class="row row-center">
+      <div class="col">
+        <div class="button-bar">
+            <button class="button button-clear button-light" style="color:#000;height:200px;font-size:5em;padding-bottom:60px;font-family:novaBold">
+            SIGN IN
+            </button>
+        </div>
+        <div class="button-bar">
+            <button class="button button-clear button-light" style="color:#fff;font-size:4em;margin-top:-20px">
+            <hr>
+            </button>
+        </div>
+        <div class="input-field">
+          <input id="email" type="email" class="validate" style="border-bottom: 1px solid #fff" ng-model="user.email">
+          <label for="email" style="color:#000;font-size:1em">EMAIL</label>
+        </div>
+        <div class="input-field">
+          <input id="password" type="password" class="validate" style="border-bottom: 1px solid #fff" ng-model="user.password">
+          <label for="password" style="color:#000;font-size:1em">PASSWORD</label>
+        </div>
+        <button class="btn button-block waves-effect waves-light blue" type="submit" name="action" ng-click="signIn(user)">SIGN IN
+          <i class="ion-ios-arrow-right right"></i>
+        </button>
+        <br><br>
+        <div class="button-bar">
+          <button class="button button-outline button-block waves-effect waves-light button-light" style="color:#FFF" type="submit" name="action" ng-click="resetPopup()">FORGOT PW?
+          </button>
+          <button class="button button-outline button-block waves-effect waves-light button-light" style="color:#FFF" type="submit" name="action" ui-sref="sign-up">SIGN UP
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,13 @@
+<ion-view view-title="CHATS" hide-back-button="true">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="room in rooms track by $index" type="item-text-wrap" href="#/tab/chats/{{room[room.length-1].roomId}}">
+        <img ng-src="{{room[room.length-1].picture}}">
+        <h2>{{room[room.length-1].sender}}</h2>
+        <p>{{room[room.length-1].message}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-view>
