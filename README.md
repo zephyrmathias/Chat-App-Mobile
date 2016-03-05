@@ -1,7 +1,7 @@
 # Zephyr Chat Application
 
-## What is Chat-Application?
--  Chat-Application is my first project for Operating System subject (November 2015).
+## What is Zephyr Chat Application?
+-  Zephyr Chat Application is my first project for Operating System subject (November 2015).
 I built a chat application using IONIC, NodeJS and AugularJS.
 By the way, this is my first mobile-application that I have built.
 
