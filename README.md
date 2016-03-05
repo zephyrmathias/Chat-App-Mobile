@@ -37,12 +37,17 @@ ionic build chatapplication
     - [Zephyrchat-pdf]
 
 ## What Are We Using?
-- IONIC
-- AngularJS
-- NodeJS
-- C9.io
-- Firebase
+- [Ionic]
+- [AngularJS]
+- [Node.Js]
+- [C9.io]
+- [Firebase]
 
 [Zephyrchat.apk]: <http://www.mediafire.com/download/s98n5etl8i8o958/zephyrchat.apk>
 [Zephyrchat-powerpoint]: <http://www.mediafire.com/download/2iqksjy6411qz8k/zephyrchat_powerpoint.pptx>
 [Zephyrchat-pdf]: <http://www.mediafire.com/download/eb8fcgwd8g88ii7/%E0%B8%84%E0%B8%B9%E0%B9%88%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%87%E0%B8%B2%E0%B8%99_zephyrchat.pdf>
+[Ionic]: <http://ionicframework.com/>
+[AngularJS]: <https://angularjs.org/>
+[Node.Js]: <https://nodejs.org/en/>
+[C9.io]: <https://c9.io>
+[Firebase]: <https://www.firebase.com/>
